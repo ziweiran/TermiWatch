@@ -86,9 +86,9 @@ var hideTimeOnce: () -> Void = {
 // MARK: - Activity string
 
 struct ActivityRingColors {
-  static let excercise = UIColor(red: 1.0, green: 0.231, blue: 0.188, alpha: 1.0)
-  static let move = UIColor(red: 0.016, green: 0.871, blue: 0.443, alpha: 1.0)
-  static let stand = UIColor(red: 0.353, green: 0.784, blue: 0.98, alpha: 1.0)
+    static let excercise = UIColor(red: 0.99, green: 0.682, blue: 0.835, alpha: 1.0)
+  static let move = UIColor(red: 0.603, green: 0.462, blue: 0.789, alpha: 1.0)
+  static let stand = UIColor(red: 0.407, green: 0.567, blue: 0.878, alpha: 1.0)
 }
 
 struct BatteryStateColors {
@@ -164,8 +164,8 @@ func progressBarString(percent: UInt, steps: UInt) -> String? {
 func batteryIndicatorString(percent: UInt) -> String {
   let percentString = "\(percent)%"
 
-  if let batteryIndicator = progressBarString(percent: percent, steps: 5) {
-    return ("\(batteryIndicator) \(percentString)")
+  if let batteryIndicator = progressBarString(percent: percent, steps: 0) {
+    return ("\(percentString)")
   }
 
   return percentString
